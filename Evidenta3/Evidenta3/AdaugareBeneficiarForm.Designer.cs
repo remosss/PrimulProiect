@@ -30,23 +30,13 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.nrContractBox = new System.Windows.Forms.TextBox();
-            this.beneficiarBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rcBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.adresaBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.reprezentantBox = new System.Windows.Forms.TextBox();
-            this.Reprezentant = new System.Windows.Forms.Label();
-            this.bancaBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ibanBox = new System.Windows.Forms.TextBox();
-            this.IBAN = new System.Windows.Forms.Label();
-            this.cifcuiBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.modificareButton = new System.Windows.Forms.Button();
+            this.anBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.adaugareButton = new System.Windows.Forms.Button();
+            this.scRadioButton = new System.Windows.Forms.RadioButton();
+            this.pfRadioButton = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.mobilBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -58,15 +48,26 @@
             this.label15 = new System.Windows.Forms.Label();
             this.adresaReprezentantBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.pfRadioButton = new System.Windows.Forms.RadioButton();
-            this.scRadioButton = new System.Windows.Forms.RadioButton();
-            this.adaugareButton = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.anBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cautarebutton = new System.Windows.Forms.Button();
+            this.reprezentantBox = new System.Windows.Forms.TextBox();
+            this.Reprezentant = new System.Windows.Forms.Label();
+            this.bancaBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ibanBox = new System.Windows.Forms.TextBox();
+            this.IBAN = new System.Windows.Forms.Label();
+            this.cifcuiBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rcBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.adresaBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.beneficiarBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nrContractBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.cautarebutton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.modificareButton);
             this.tabPage1.Controls.Add(this.anBox);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.dateTimePicker1);
@@ -126,143 +128,72 @@
             this.tabPage1.Text = "Beneficiar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // modificareButton
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(818, 715);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Investitie";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.modificareButton.Enabled = false;
+            this.modificareButton.Location = new System.Drawing.Point(363, 114);
+            this.modificareButton.Name = "modificareButton";
+            this.modificareButton.Size = new System.Drawing.Size(179, 32);
+            this.modificareButton.TabIndex = 34;
+            this.modificareButton.Text = "Modificare";
+            this.modificareButton.UseVisualStyleBackColor = true;
+            this.modificareButton.Click += new System.EventHandler(this.modificareButton_Click);
             // 
-            // label1
+            // anBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nr contract";
+            this.anBox.Location = new System.Drawing.Point(159, 64);
+            this.anBox.Name = "anBox";
+            this.anBox.Size = new System.Drawing.Size(151, 22);
+            this.anBox.TabIndex = 33;
             // 
-            // nrContractBox
+            // label5
             // 
-            this.nrContractBox.Location = new System.Drawing.Point(159, 36);
-            this.nrContractBox.Name = "nrContractBox";
-            this.nrContractBox.Size = new System.Drawing.Size(151, 22);
-            this.nrContractBox.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 17);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "An";
             // 
-            // beneficiarBox
+            // dateTimePicker1
             // 
-            this.beneficiarBox.Location = new System.Drawing.Point(159, 98);
-            this.beneficiarBox.Name = "beneficiarBox";
-            this.beneficiarBox.Size = new System.Drawing.Size(151, 22);
-            this.beneficiarBox.TabIndex = 3;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(469, 39);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
+            this.dateTimePicker1.TabIndex = 31;
             // 
-            // label2
+            // adaugareButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Beneficiar";
+            this.adaugareButton.Location = new System.Drawing.Point(363, 76);
+            this.adaugareButton.Name = "adaugareButton";
+            this.adaugareButton.Size = new System.Drawing.Size(179, 32);
+            this.adaugareButton.TabIndex = 30;
+            this.adaugareButton.Text = "Adaugare";
+            this.adaugareButton.UseVisualStyleBackColor = true;
+            this.adaugareButton.Click += new System.EventHandler(this.adaugareButton_Click);
             // 
-            // rcBox
+            // scRadioButton
             // 
-            this.rcBox.Location = new System.Drawing.Point(159, 189);
-            this.rcBox.Name = "rcBox";
-            this.rcBox.Size = new System.Drawing.Size(151, 22);
-            this.rcBox.TabIndex = 7;
+            this.scRadioButton.AutoSize = true;
+            this.scRadioButton.Location = new System.Drawing.Point(168, 656);
+            this.scRadioButton.Name = "scRadioButton";
+            this.scRadioButton.Size = new System.Drawing.Size(47, 21);
+            this.scRadioButton.TabIndex = 29;
+            this.scRadioButton.TabStop = true;
+            this.scRadioButton.Text = "SC";
+            this.scRadioButton.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // pfRadioButton
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "RC";
-            // 
-            // adresaBox
-            // 
-            this.adresaBox.Location = new System.Drawing.Point(159, 144);
-            this.adresaBox.Name = "adresaBox";
-            this.adresaBox.Size = new System.Drawing.Size(151, 22);
-            this.adresaBox.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Adresa Beneficiar";
-            // 
-            // reprezentantBox
-            // 
-            this.reprezentantBox.Location = new System.Drawing.Point(159, 367);
-            this.reprezentantBox.Name = "reprezentantBox";
-            this.reprezentantBox.Size = new System.Drawing.Size(151, 22);
-            this.reprezentantBox.TabIndex = 15;
-            // 
-            // Reprezentant
-            // 
-            this.Reprezentant.AutoSize = true;
-            this.Reprezentant.Location = new System.Drawing.Point(7, 367);
-            this.Reprezentant.Name = "Reprezentant";
-            this.Reprezentant.Size = new System.Drawing.Size(90, 17);
-            this.Reprezentant.TabIndex = 14;
-            this.Reprezentant.Text = "Reprezenant";
-            // 
-            // bancaBox
-            // 
-            this.bancaBox.Location = new System.Drawing.Point(159, 325);
-            this.bancaBox.Name = "bancaBox";
-            this.bancaBox.Size = new System.Drawing.Size(151, 22);
-            this.bancaBox.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 325);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 17);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Banca";
-            // 
-            // ibanBox
-            // 
-            this.ibanBox.Location = new System.Drawing.Point(159, 279);
-            this.ibanBox.Name = "ibanBox";
-            this.ibanBox.Size = new System.Drawing.Size(151, 22);
-            this.ibanBox.TabIndex = 11;
-            // 
-            // IBAN
-            // 
-            this.IBAN.AutoSize = true;
-            this.IBAN.Location = new System.Drawing.Point(7, 279);
-            this.IBAN.Name = "IBAN";
-            this.IBAN.Size = new System.Drawing.Size(39, 17);
-            this.IBAN.TabIndex = 10;
-            this.IBAN.Text = "IBAN";
-            // 
-            // cifcuiBox
-            // 
-            this.cifcuiBox.Location = new System.Drawing.Point(159, 237);
-            this.cifcuiBox.Name = "cifcuiBox";
-            this.cifcuiBox.Size = new System.Drawing.Size(151, 22);
-            this.cifcuiBox.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 237);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 17);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "CIF/CUI";
+            this.pfRadioButton.AutoSize = true;
+            this.pfRadioButton.Location = new System.Drawing.Point(10, 656);
+            this.pfRadioButton.Name = "pfRadioButton";
+            this.pfRadioButton.Size = new System.Drawing.Size(46, 21);
+            this.pfRadioButton.TabIndex = 28;
+            this.pfRadioButton.TabStop = true;
+            this.pfRadioButton.Text = "PF";
+            this.pfRadioButton.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -353,70 +284,143 @@
             this.label16.TabIndex = 16;
             this.label16.Text = "Adresa Reprezentant";
             // 
-            // pfRadioButton
+            // reprezentantBox
             // 
-            this.pfRadioButton.AutoSize = true;
-            this.pfRadioButton.Location = new System.Drawing.Point(10, 656);
-            this.pfRadioButton.Name = "pfRadioButton";
-            this.pfRadioButton.Size = new System.Drawing.Size(46, 21);
-            this.pfRadioButton.TabIndex = 28;
-            this.pfRadioButton.TabStop = true;
-            this.pfRadioButton.Text = "PF";
-            this.pfRadioButton.UseVisualStyleBackColor = true;
+            this.reprezentantBox.Location = new System.Drawing.Point(159, 367);
+            this.reprezentantBox.Name = "reprezentantBox";
+            this.reprezentantBox.Size = new System.Drawing.Size(151, 22);
+            this.reprezentantBox.TabIndex = 15;
             // 
-            // scRadioButton
+            // Reprezentant
             // 
-            this.scRadioButton.AutoSize = true;
-            this.scRadioButton.Location = new System.Drawing.Point(168, 656);
-            this.scRadioButton.Name = "scRadioButton";
-            this.scRadioButton.Size = new System.Drawing.Size(47, 21);
-            this.scRadioButton.TabIndex = 29;
-            this.scRadioButton.TabStop = true;
-            this.scRadioButton.Text = "SC";
-            this.scRadioButton.UseVisualStyleBackColor = true;
+            this.Reprezentant.AutoSize = true;
+            this.Reprezentant.Location = new System.Drawing.Point(7, 367);
+            this.Reprezentant.Name = "Reprezentant";
+            this.Reprezentant.Size = new System.Drawing.Size(90, 17);
+            this.Reprezentant.TabIndex = 14;
+            this.Reprezentant.Text = "Reprezenant";
             // 
-            // adaugareButton
+            // bancaBox
             // 
-            this.adaugareButton.Location = new System.Drawing.Point(363, 76);
-            this.adaugareButton.Name = "adaugareButton";
-            this.adaugareButton.Size = new System.Drawing.Size(179, 32);
-            this.adaugareButton.TabIndex = 30;
-            this.adaugareButton.Text = "Adaugare";
-            this.adaugareButton.UseVisualStyleBackColor = true;
-            this.adaugareButton.Click += new System.EventHandler(this.adaugareButton_Click);
+            this.bancaBox.Location = new System.Drawing.Point(159, 325);
+            this.bancaBox.Name = "bancaBox";
+            this.bancaBox.Size = new System.Drawing.Size(151, 22);
+            this.bancaBox.TabIndex = 13;
             // 
-            // dateTimePicker1
+            // label6
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(469, 39);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
-            this.dateTimePicker1.TabIndex = 31;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 325);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 17);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Banca";
             // 
-            // anBox
+            // ibanBox
             // 
-            this.anBox.Location = new System.Drawing.Point(159, 64);
-            this.anBox.Name = "anBox";
-            this.anBox.Size = new System.Drawing.Size(151, 22);
-            this.anBox.TabIndex = 33;
+            this.ibanBox.Location = new System.Drawing.Point(159, 279);
+            this.ibanBox.Name = "ibanBox";
+            this.ibanBox.Size = new System.Drawing.Size(151, 22);
+            this.ibanBox.TabIndex = 11;
             // 
-            // label5
+            // IBAN
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 17);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "An";
+            this.IBAN.AutoSize = true;
+            this.IBAN.Location = new System.Drawing.Point(7, 279);
+            this.IBAN.Name = "IBAN";
+            this.IBAN.Size = new System.Drawing.Size(39, 17);
+            this.IBAN.TabIndex = 10;
+            this.IBAN.Text = "IBAN";
             // 
-            // cautarebutton
+            // cifcuiBox
             // 
-            this.cautarebutton.Location = new System.Drawing.Point(419, 19);
-            this.cautarebutton.Name = "cautarebutton";
-            this.cautarebutton.Size = new System.Drawing.Size(208, 30);
-            this.cautarebutton.TabIndex = 1;
-            this.cautarebutton.Text = "Cautare Contracte";
-            this.cautarebutton.UseVisualStyleBackColor = true;
-            this.cautarebutton.Click += new System.EventHandler(this.cautarebutton_Click);
+            this.cifcuiBox.Location = new System.Drawing.Point(159, 237);
+            this.cifcuiBox.Name = "cifcuiBox";
+            this.cifcuiBox.Size = new System.Drawing.Size(151, 22);
+            this.cifcuiBox.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 237);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "CIF/CUI";
+            // 
+            // rcBox
+            // 
+            this.rcBox.Location = new System.Drawing.Point(159, 189);
+            this.rcBox.Name = "rcBox";
+            this.rcBox.Size = new System.Drawing.Size(151, 22);
+            this.rcBox.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "RC";
+            // 
+            // adresaBox
+            // 
+            this.adresaBox.Location = new System.Drawing.Point(159, 144);
+            this.adresaBox.Name = "adresaBox";
+            this.adresaBox.Size = new System.Drawing.Size(151, 22);
+            this.adresaBox.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Adresa Beneficiar";
+            // 
+            // beneficiarBox
+            // 
+            this.beneficiarBox.Location = new System.Drawing.Point(159, 98);
+            this.beneficiarBox.Name = "beneficiarBox";
+            this.beneficiarBox.Size = new System.Drawing.Size(151, 22);
+            this.beneficiarBox.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Beneficiar";
+            // 
+            // nrContractBox
+            // 
+            this.nrContractBox.Location = new System.Drawing.Point(159, 36);
+            this.nrContractBox.Name = "nrContractBox";
+            this.nrContractBox.Size = new System.Drawing.Size(151, 22);
+            this.nrContractBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nr contract";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(818, 715);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Investitie";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -430,12 +434,22 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 26);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(818, 715);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Formulare";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // cautarebutton
+            // 
+            this.cautarebutton.Location = new System.Drawing.Point(419, 19);
+            this.cautarebutton.Name = "cautarebutton";
+            this.cautarebutton.Size = new System.Drawing.Size(208, 30);
+            this.cautarebutton.TabIndex = 1;
+            this.cautarebutton.Text = "Cautare Contracte";
+            this.cautarebutton.UseVisualStyleBackColor = true;
+            this.cautarebutton.Click += new System.EventHandler(this.cautarebutton_Click);
             // 
             // AdaugareBeneficiarForm
             // 
@@ -494,5 +508,6 @@
         private System.Windows.Forms.Button cautarebutton;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button modificareButton;
     }
 }

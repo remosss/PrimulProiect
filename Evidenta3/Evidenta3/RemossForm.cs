@@ -13,14 +13,17 @@ namespace Evidenta3
 {
     public partial class RemossForm : Form
     {
-        public string path = @"D:\Baza de date test";
-        SQLiteConnection sqlite=new SQLiteConnection("Data Source=D:\\Baza de date test\\Test.db");
+       
+        SQLiteConnection sqlite=new SQLiteConnection("Data Source=" + System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\Test.db");
+
         DataTable dtbl=new DataTable();
-        public RemossForm()
+        AdaugareBeneficiarForm adaugare;
+        public RemossForm(AdaugareBeneficiarForm adaugareBeneficiarForm)
         {
             InitializeComponent();
             adaugareFiltruBox();
             populareTabela();
+            adaugare = adaugareBeneficiarForm;
         }
         //populare combobox
         public void adaugareFiltruBox()
@@ -59,5 +62,30 @@ namespace Evidenta3
         {
 
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int linia_selectata = dataGridView1.CurrentCell.RowIndex;
+            adaugare.primireDate(
+                dataGridView1.Rows[linia_selectata].Cells[0].Value.ToString(), 
+                dataGridView1.Rows[linia_selectata].Cells[1].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[2].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[3].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[4].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[5].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[6].Value.ToString(), 
+                dataGridView1.Rows[linia_selectata].Cells[7].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[8].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[9].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[10].Value.ToString(), 
+                dataGridView1.Rows[linia_selectata].Cells[11].Value.ToString(), 
+                dataGridView1.Rows[linia_selectata].Cells[12].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[13].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[14].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[15].Value.ToString(),
+                dataGridView1.Rows[linia_selectata].Cells[16].Value.ToString());
+            this.Close();
+        }
+      
     }
 }
